@@ -70,8 +70,44 @@ $ cargo new hello_cargo
 $ cd hello_cargo
 ```
 ※プロジェクト名の先頭に数字は使えません（エラーになります）
+※Git repository上で上記コマンドを操作する場合は以下のように`--vsc`オプションを指定して下さい。
 
+```
+$ cargo new --vcs=git hello_cargo
+```
 
+### Building and Running
+
+```sh
+$ cargo build
+$ ./target/debug/hello_cargo
+Hello, world!
+```
+
+コンパイルと実行を同時に実施したい場合は`run`コマンドを使用できる。
+
+```sh
+$ cargo run
+    Finished dev [unoptimized + debuginfo] target(s) in 0.00s
+     Running `target/debug/hello_cargo`
+Hello, world!
+```
+
+実行せずにコンパイルされているかチェックする場合は`check`コマンドを利用できます。
+
+```sh
+$ cargo check
+    Checking hello_cargo v0.1.0 (/Users/fumi/Dev/wshub/rust_tutorial/02_hello_cargo/hello_cargo)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.13s
+```
+
+プロジェクトをリリースモードでbuildしたい場合は、`--release`オプションを指定できます。
+
+```sh
+$ cargo build --release     
+   Compiling hello_cargo v0.1.0 (/Users/fumi/Dev/wshub/rust_tutorial/02_hello_cargo/hello_cargo)
+    Finished release [optimized] target(s) in 0.25s
+```
 
 
 ## Uninstall
