@@ -70,7 +70,7 @@ $ cargo new hello_cargo
 $ cd hello_cargo
 ```
 ※プロジェクト名の先頭に数字は使えません（エラーになります）
-※Git repository上で上記コマンドを操作する場合は以下のように`--vsc`オプションを指定して下さい。
+※新規にGit管理する場合はは以下のように`--vsc`オプションを指定して下さい。
 
 ```
 $ cargo new --vcs=git hello_cargo
