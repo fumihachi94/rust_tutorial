@@ -9,6 +9,10 @@
   - [Environment](#environment)
   - [Rust Install & Update](#rust-install-update)
   - [Version確認](#version確認)
+  - [rustc : Compiling and Running](#rustc-compiling-and-running)
+  - [Cargo](#cargo)
+    - [Creating a Project](#creating-a-project)
+    - [Building and Running](#building-and-running)
   - [Uninstall](#uninstall)
 - [VScode](#vscode)
   - [Extentions](#extentions)
@@ -109,6 +113,14 @@ $ cargo build --release
     Finished release [optimized] target(s) in 0.25s
 ```
 
+## Variables
+
+`let`で変数を定義できるが、基本的にimmutableの変数となる。mutableな変数とするときは、`let mut`とする必要がある。
+
+```rs
+let foo = 5; // immutable
+let mut bar = 5; // mutable
+```
 
 ## Uninstall
 
