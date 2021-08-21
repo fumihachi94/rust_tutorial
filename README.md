@@ -6,21 +6,24 @@
 <!-- code_chunk_output -->
 
 - [Rust Tutorial](#rust-tutorial)
-  - [Environment](#environment)
-  - [Rust Install & Update](#rust-install-update)
+- [Rust setup](#rust-setup)
+  - [MacOS](#macos)
+  - [Rust Install & Update](#rust-install--update)
   - [Version確認](#version確認)
-  - [rustc : Compiling and Running](#rustc-compiling-and-running)
+  - [rustc : Compiling and Running](#rustc--compiling-and-running)
   - [Cargo](#cargo)
     - [Creating a Project](#creating-a-project)
     - [Building and Running](#building-and-running)
+  - [Variables](#variables)
   - [Uninstall](#uninstall)
 - [VScode](#vscode)
   - [Extentions](#extentions)
 
 <!-- /code_chunk_output -->
 
+# Rust setup
 
-## Environment
+## MacOS
 
 ```
 $ sw_vers 
