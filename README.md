@@ -6,11 +6,12 @@
 <!-- code_chunk_output -->
 
 - [Rust Tutorial](#rust-tutorial)
+- [Rust feature](#rust-feature)
 - [Rust setup](#rust-setup)
   - [MacOS](#macos)
-  - [Rust Install & Update](#rust-install--update)
+  - [Rust Install & Update](#rust-install-update)
   - [Version確認](#version確認)
-  - [rustc : Compiling and Running](#rustc--compiling-and-running)
+  - [rustc : Compiling and Running](#rustc-compiling-and-running)
   - [Cargo](#cargo)
     - [Creating a Project](#creating-a-project)
     - [Building and Running](#building-and-running)
@@ -20,6 +21,10 @@
   - [Extentions](#extentions)
 
 <!-- /code_chunk_output -->
+
+# Rust feature
+
+- ライブラリの利用/更新が容易であるため、小さいプロジェクトをアセンブリしていくことが推奨されている。
 
 # Rust setup
 
