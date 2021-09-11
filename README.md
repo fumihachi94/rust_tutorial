@@ -1,27 +1,10 @@
 # Rust Tutorial
 
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
-<!-- code_chunk_output -->
+# Rust feature
 
-- [Rust Tutorial](#rust-tutorial)
-- [Rust setup](#rust-setup)
-  - [MacOS](#macos)
-    - [Rust Install & Update](#rust-install-update)
-    - [Version確認](#version確認)
-    - [rustc : Compiling and Running](#rustc-compiling-and-running)
-    - [Cargo](#cargo)
-    - [Creating a Project](#creating-a-project)
-    - [Building and Running](#building-and-running)
-    - [Variables](#variables)
-    - [Uninstall](#uninstall)
-  - [Ubuntu](#ubuntu)
-    - [curlでインストールに失敗した場合](#curlでインストールに失敗した場合)
-- [VScode](#vscode)
-  - [Extentions](#extentions)
-
-<!-- /code_chunk_output -->
+- ライブラリの利用/更新が容易であるため、小さいプロジェクトをアセンブリしていくことが推奨されている。
 
 # Rust setup
 
