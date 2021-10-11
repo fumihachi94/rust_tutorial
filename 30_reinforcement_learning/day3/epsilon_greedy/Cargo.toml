@@ -1,0 +1,10 @@
+[package]
+name = "epsilon_greedy"
+version = "0.1.0"
+edition = "2018"
+authors = ["Fumiya Sato <fumiya_sato_rop@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.8.4"
