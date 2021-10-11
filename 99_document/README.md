@@ -5,6 +5,13 @@
 
 <!-- code_chunk_output -->
 
+- [Ownership](#ownership)
+  - [Ownershipのルール](#ownershipのルール)
+  - [移動とコピーと参照と借用と](#移動とコピーと参照と借用と)
+    - [移動 / Move](#移動-move)
+    - [コピー / Copy](#コピー-copy)
+    - [参照 / Reference](#参照-reference)
+    - [借用 / Borrowing](#借用-borrowing)
 - [基本データ型](#基本データ型)
   - [Scalar Types](#scalar-types)
   - [Compound Types](#compound-types)
@@ -12,8 +19,103 @@
     - [配列 / Array](#配列-array)
 - [関数 / Function](#関数-function)
 - [for文](#for文)
+- [Errorの扱い](#errorの扱い)
 
 <!-- /code_chunk_output -->
+
+# Ownership
+
+Rust最大の特徴がこの[ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)というものらしい。
+
+ownershipシステムがメモリの割当/開放を管理してくれるため、設計者はメモリ管理に気を使うことが軽減される。
+コンパイル時にコンパイラーがチェックする。
+
+## Ownershipのルール
+
+- Rust上の各値は`owner`と呼ばれる変数が割当てられる
+- 各値に対し同時にひとつの`owner`しか存在できない
+- `owner`がスコープから外れたら、メモリを自動的に開放してくれる
+　（C++でも関数抜けるときに`delete`しなくてもいいようになっているのと似たようなものと思ってる）
+
+## 移動とコピーと参照と借用と
+
+### 移動 / Move
+
+```rust
+// Errorになるケース
+// s1のownerがs2に移動(move)するため以降でs1は参照できなくなる
+let s1 = String::from("Hello");
+let s2 = s1;
+println!("{}", s1);
+```
+### コピー / Copy
+
+```rust
+// OKのケース
+// s1のownerがs2にコピー(Copy)されるため以降でもs1を参照できる
+let s1 = String::from("Hello");
+let s2 = s1.clone();
+println!("{}", s1);
+```
+
+スタックに格納される（コンパイル時にサイズがわかっている）場合は、`clone()`を利用しなくてもコピーされます。
+※上記の例ではヒープに格納されています。
+
+```rust
+// OKのケース
+// s1がスタックに格納されるため、s2にコピー(copy)され以降でもs1を参照できる
+let s1 = "Hello";
+let s2 = s1;
+println!("{}", s1);
+```
+
+### 参照 / Reference
+
+- `immutable`の参照
+
+ポインタを渡すがimmutableなので変更はできない。
+
+```rust
+// ポインタ渡し
+fn main() {
+    let s1 = String::from("hello");
+    let len = calculate_length(&s1);
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+    // s.push_str(", world"); <-- immutableなので変更できない
+    s.len()
+}
+```
+
+### 借用 / Borrowing
+
+- `mutable`の参照
+
+ポインタを渡し、mutableなので変更も可能。
+
+```rust
+fn main(){
+    // ポインタ渡し
+    let mut s1 = String::from("hello");
+    let len = calculate_length(&mut s1);
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: &mut String) -> usize {
+    s.push_str(", world"); // <--変更可能
+    s.len()
+}
+```
+
+
+
+
+
+
+
+
 
 
 # 基本データ型
@@ -164,3 +266,29 @@ fn main() {
     let number = if condition { 5 } else { "six" };
 }
 ```
+
+
+# Errorの扱い
+
+`panic!`と`Result`の2つがある
+
+`panic!` : エラーを検出したらプログラムは停止
+`Result` : エラーを検出してもプログラムは継続
+
+[error_tutorial](../04_basic_concept/error_concept/src/main.rs)
+> ../04_basic_concept/error_concept/src/main.rs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
