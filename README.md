@@ -174,6 +174,10 @@ Rustコンパイラであるrustcには組込みのlintがあります。
 
 [Rustコンパイラ組込みのlintについて調べる - 低レイヤ強くなりたい組込み屋さんのブログ](https://tomo-wait-for-it-yuki.hatenablog.com/entry/2019/05/10/185418)
 
+# std: Standard Library
+
+詳細はこちら”[std - Rust](https://doc.rust-lang.org/std/index.html)”を確認
+
 ---
 
 # VScode

@@ -1,6 +1,21 @@
 [Programming a Guessing Game - The Rust Programming Language](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html)
 
 
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [standard input](#standard-input)
+- [Standard output](#standard-output)
+- [依存ライブラリの指定](#依存ライブラリの指定)
+- [依存ライブラリのバージョン更新](#依存ライブラリのバージョン更新)
+- [cargoドキュメントの生成](#cargoドキュメントの生成)
+- [match構文の使い方](#match構文の使い方)
+- [shadowing](#shadowing)
+
+<!-- /code_chunk_output -->
+
+
 ## standard input 
 
 ```rust
